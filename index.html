@@ -1533,6 +1533,16 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-hello {
+            display: none;
+        }
+
         .nav-toggle {
             display: none;
             align-items: center;
@@ -1702,6 +1712,21 @@
                 display: none;
             }
 
+            .nav-hello {
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: -0.02em;
+                color: var(--text-primary);
+                pointer-events: none;
+                white-space: nowrap;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 88px;
@@ -1798,14 +1823,20 @@ body.light-mode .ambient-glow{opacity:0.08;}
             <a href="#contact">Contact</a>
         </div>
 
+        <div class="nav-hello" aria-hidden="true">Hello</div>
+
         <div class="nav-status">
             <span class="nav-status-dot"></span>
             <span>Open to opportunities</span>
-        </div><button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
 
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-            <i class="fas fa-bars"></i>
-        </button>
+        <div class="nav-icons">
+            <button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+
+            <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
     </nav>
 
